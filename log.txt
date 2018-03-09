@@ -1,0 +1,13 @@
+161194@lab200ab-ws04 MINGW64 ~/lab1 (logging)
+$ git log
+commit 4328f8cf50bd09aca7555c8ca1e37fedf2b1d304 (HEAD -> logging, origin/master, master)
+Author: vancho.jovanovski@students.finki.ukim.mk <vancho.jovanovski@students.finki.ukim.mk>
+Date:   Fri Mar 9 15:48:11 2018 +0100
+
+    modify l1.txt
+
+commit 0b07d869088d1c9e269c03344d23df6a86fd7846
+Author: vancho.jovanovski@students.finki.ukim.mk <vancho.jovanovski@students.finki.ukim.mk>
+Date:   Fri Mar 9 15:46:19 2018 +0100
+
+    Initial commit
