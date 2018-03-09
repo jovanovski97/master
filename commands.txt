@@ -1,0 +1,50 @@
+$ mkdir lab 1
+
+$ cd lab1
+
+$ notepad l1.txt
+
+$ git init
+
+$ git add . l1.txt
+
+$ git commit -m "Initial commit"
+
+$ git add . l1.txt
+
+$ git commit -m "modify l1.txt"
+
+$ git remote add origin https://github.com/jovanovski97/master.git
+
+$ git push origin master
+
+$ git diff
+
+$ git checkout -- l1.txt
+
+$ git branch logging
+
+$ git checkout logging
+
+$ notepad log.txt
+
+$ git log
+
+$ git add . log.txt
+
+$ git commit -m "Add log.txt"
+
+$ git push origin logging
+
+$ git checkout master
+
+$ git merge logging
+
+$ git push -u origin master
+
+$ git branch allcomands
+
+$ git checkout allcomands
+
+$ notepad commands.txt
+

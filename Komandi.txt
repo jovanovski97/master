@@ -1,5 +1,7 @@
+
 161194@lab200ab-ws04 MINGW64 ~
 $ mkdir lab1
+mkdir: cannot create directory ‘lab1’: File exists
 
 161194@lab200ab-ws04 MINGW64 ~
 $ cd lab1
@@ -85,7 +87,7 @@ After doing this, you may fix the identity used for this commit with:
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 161194@lab200ab-ws04 MINGW64 ~/lab1 (master)
-$
+$ ^C
 
 161194@lab200ab-ws04 MINGW64 ~/lab1 (master)
 $ git remote add origin https://github.com/jovanovski97/master.git
@@ -115,6 +117,11 @@ index 500a994..20a37ef 100644
 \ No newline at end of file
 
 161194@lab200ab-ws04 MINGW64 ~/lab1 (master)
+$ git reset HEAD l1.txt
+Unstaged changes after reset:
+M       l1.txt
+
+161194@lab200ab-ws04 MINGW64 ~/lab1 (master)
 $ git checkout -- l1.txt
 
 161194@lab200ab-ws04 MINGW64 ~/lab1 (master)
@@ -123,3 +130,77 @@ $ git branch logging
 161194@lab200ab-ws04 MINGW64 ~/lab1 (master)
 $ git checkout logging
 Switched to branch 'logging'
+
+161194@lab200ab-ws04 MINGW64 ~/lab1 (logging)
+$ notepad log.txt
+
+161194@lab200ab-ws04 MINGW64 ~/lab1 (logging)
+$ git log
+commit 4328f8cf50bd09aca7555c8ca1e37fedf2b1d304 (HEAD -> logging, origin/master, master)
+Author: vancho.jovanovski@students.finki.ukim.mk <vancho.jovanovski@students.finki.ukim.mk>
+Date:   Fri Mar 9 15:48:11 2018 +0100
+
+    modify l1.txt
+
+commit 0b07d869088d1c9e269c03344d23df6a86fd7846
+Author: vancho.jovanovski@students.finki.ukim.mk <vancho.jovanovski@students.finki.ukim.mk>
+Date:   Fri Mar 9 15:46:19 2018 +0100
+
+    Initial commit
+
+161194@lab200ab-ws04 MINGW64 ~/lab1 (logging)
+$ git add . log.txt
+
+161194@lab200ab-ws04 MINGW64 ~/lab1 (logging)
+$ git commit -m "Add log.txt"
+[logging 520f70a] Add log.txt
+ Committer: vancho.jovanovski@students.finki.ukim.mk <vancho.jovanovski@students.finki.ukim.mk>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 138 insertions(+)
+ create mode 100644 Komandi.txt
+ create mode 100644 log.txt
+
+161194@lab200ab-ws04 MINGW64 ~/lab1 (logging)
+$ git push origin logging
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.53 KiB | 313.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/jovanovski97/master.git
+ * [new branch]      logging -> logging
+
+161194@lab200ab-ws04 MINGW64 ~/lab1 (logging)
+$ git checkout master
+Switched to branch 'master'
+
+161194@lab200ab-ws04 MINGW64 ~/lab1 (master)
+$ git merge logging
+Updating 4328f8c..520f70a
+Fast-forward
+ Komandi.txt | 125 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ log.txt     |  13 +++++++
+ 2 files changed, 138 insertions(+)
+ create mode 100644 Komandi.txt
+ create mode 100644 log.txt
+
+161194@lab200ab-ws04 MINGW64 ~/lab1 (master)
+$ git push -u origin master
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/jovanovski97/master.git
+   4328f8c..520f70a  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+161194@lab200ab-ws04 MINGW64 ~/lab1 (master)
+$ git
